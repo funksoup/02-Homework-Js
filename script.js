@@ -27,15 +27,12 @@ function generatePassword() {
 	// get user preferences 
 	var numOfChars = prompt("How many characters do you want?","Choose a value between 8 and 128", "");
 	// add if statements to set min and max value
-		
-		// if(isNaN(numOfChars) || numOfChars<8 || numOfChars>128) {
-		// 	alert("Choose a number between 8 and 128");
-		// }
 
-	// while (!isNaN(numOfChars) || numOfChars>=8 || numOfChars<=128) {
-	// 	numOfChars = prompt("How many characters do you want?","Choose a value between 8 and 128", "");
-	// } 
-	// alert("Choose a number between 8 and 128");	
+		while ((isNaN(numOfChars) || numOfChars<8) || numOfChars>128) {
+			alert("Choose a number between 8 and 128");	
+			numOfChars = prompt("How many characters do you want?","Choose a value between 8 and 128", "");
+		} 
+		
 
 	var uppercasePref = confirm("Include uppercase characters? Press OK to include or Cancel to exclude");
 	var specialPref = confirm("Include special characters? Press OK to include or Cancel to exclude");
